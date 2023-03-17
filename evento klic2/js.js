@@ -9,3 +9,7 @@ function text(element){
   function hide(element){
       element.remove()
   }
+
+function mensaje(){
+  alert("holaaaaa mundeeee")
+}
