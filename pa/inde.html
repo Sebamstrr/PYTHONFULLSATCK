@@ -6,32 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dti.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<main>       
-    <section class="section-1">
-        <div class="container-user">
-             <div class="azul">
-                    <img src="icons/user-circle.png" alt="img_user" class="perfil">
-            </div>
-                <div class="texto">
-                    <h2>jane doe</h2>
-                    <h4><img src="icons/map-marker.png" alt="img_ubi" class="icono">Seattle</h4>
-                    <p>
-                    <h6>Developer| Engineer| Problem Solver
-                    </h6>
-                    <h6> Master of shadows and the Internet</h6>
-                    </p>
-                <a href="a">
-                    <h4 class="edit_profile_icon"><img src="icons/gear.png" alt="img_rueda" class="icono">edit
-                         profile</h4>   
-                </a>
+    <div class="top">
+        <div class="nav">
+            <h1 class="nav-title">Profile</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">My Profile</a></li>
+                <li><a href="#">Find Connections</a></li>
+                <li><button class="btn">Sign Out</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-2">
+                <div class="user-card">
+                    <div class="card-header">
+                        <img src="icons/user-circle.png" alt="jane-medium-avatar" class="avatar-m">
+                    </div>
+                    <div class="card-body">
+                        <h1>Jane Doe</h1>
+                        <h3>
+                            <img src="icons/map-marker.png" alt="pin" class="icon-s">
+                            Seattle
+                        </h3>
+                        <p>Developer | Engineer | Problem Solver<br>
+                            Master of shadows and the Internet!</p>
+                        <p>
+                            <a href="#">
+                                <img src="icons/gear.png" alt="gear" class="icon-s">
+                                edit profile
+                            </a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-    </section>
-</main>
 </body>
 </html>
