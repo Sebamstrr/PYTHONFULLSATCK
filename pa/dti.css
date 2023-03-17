@@ -1,0 +1,45 @@
+*{
+margin: 1px;
+padding: 1px;
+font-family: cursive;
+}
+
+
+.container-user{
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.azul{
+    background-color: aqua;
+    height: 70px;
+}
+
+.perfil{
+    border-radius: 65%;
+    width: 65px;
+    border: 1px solid rgb(110, 110, 110);
+    position: relative;
+    top: 35px ;
+    left: 15px;
+}
+
+.texto{
+    flex-direction: column ;
+    display: flex;
+    padding: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.icono{
+    width: 10px;
+}
+
+
+.edit_profile_icon{
+    list-style: url();
+    color: rgb(2, 119, 214);
+}
+
+
+
