@@ -10,6 +10,6 @@ function text(element){
       element.remove()
   }
 
-function mensaje(){
+function texto(){
   alert("holaaaaa mundeeee")
 }
