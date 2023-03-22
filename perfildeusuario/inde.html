@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="top">
-        <div class="nav">
+
+    <!-- navbar -->
+    <div class="nav">
+        <div class="flex-container">
             <h1 class="nav-title">Profile</h1>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -21,105 +22,106 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <!-- left column -->
-            <div class="col-2">
-                <div class="user-card">
-                    <div class="card-header">
-                        <img src="icons/user-circle.png" alt="jane-medium-avatar" class="avatar-m">
-                    </div>
-                    <div class="card-body">
-                        <h1>Jane Doe</h1>
-                        <h3>
-                            <img src="icons/map-marker.png" alt="pin" class="icon-s">
-                            Seattle
-                        </h3>
-                        <p>Developer | Engineer | Problem Solver<br>
-                            Master of shadows and the Internet!</p>
-                        <p>
-                            <a href="#">
-                                <img src="icons/gear.png" alt="gear" class="icon-s">
-                                edit profile
-                            </a>
-                        </p>
-                    </div>
+
+    <!-- main -->
+    <div class="flex-container main">
+
+        <!-- 2/3 width column -->
+        <div class="col-2">
+
+            <!-- user info card -->
+            <div class="card user-card">
+                <div class="card-header">
+                    <img src="icons/user-circle.png" alt="jane" class="avatar-m">
                 </div>
-                <div class="card">
-                    <div class="header">
-                        Education
-                    </div>
-                    <div class="card-body">
-                        <h2>Coding Dojo Full Stack Bootcamp</h2>
-                        <p class="dates">Dec 2019 - Mar 2020</p>
-                        <p>Triple Black Belt in Pyton, C#, and MERN...</p>
-                    </div>
+                <div class="card-body">
+                    <h1 id="username">Jane Doe</h1>
+                    <h3><img src="icons/map-marker.png" alt="pin" class="icon-s"> Seattle</h3>
+                    <p>Developer | Engineer | Problem Solver<br>
+                    Master of shadows and the Internet!</p>
+                    <p onclick="edit()"><a href="#"><img src="icons/gear.png" alt="gear" class="icon-s"> edit profile</a></p>
                 </div>
             </div>
-            <!-- right column -->
-            <div class="col">
-                <div class="card">
-                    <div class="header">
-                        <span class="connections">2</span>
-                        Connection Requests
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
+
+            <!-- user education card -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Education</h3>
+                </div>
+                <div class="card-body">
+                    <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                    <p class="dates">Dec 2019 - Mar 2020</p>
+                    <p>Triple black belt in Python, MERN, and C#...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 1/3 width column -->
+        <div class="col-1">
+
+            <!-- connection requests card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge" id="requests">2</span>
+                    <h3>Connection Requests</h3>
+                </div>
+                <ul class="card-list">
+                    <li class="card-list-item" id="request-1">
+                        <span>
                             <img src="icons/user-circle.png" alt="todd" class="avatar-s">
-                            <span>Todd E.</span>
+                            Todd E
                         </span>
-                        <span class="end">
-                            <img src="icons/accept-circle.png" alt="accept" class="avatar-s">
-                            <img src="icons/close-circle.png" alt="decline" class="avatar-s">
+                        <span>
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick='accept("#request-1")'>
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick='ignore("#request-1")'>
                         </span>
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
+                    </li>
+                    <li class="card-list-item" id="request-2">
+                        <span>
                             <img src="icons/user-circle.png" alt="phil" class="avatar-s">
-                            <span>Phil K.</span>
+                            Phil E
                         </span>
-                        <span class="end">
-                            <img src="icons/accept-circle.png" alt="accept" class="avatar-s">
-                            <img src="icons/close-circle.png" alt="decline" class="avatar-s">
+                        <span>
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick='accept("#request-2")'>
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick='ignore("#request-2")'>
                         </span>
-                    </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- your connections card -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="badge" id="connections">498</span>
+                    <h3>Your Connections</h3>
                 </div>
-                <div class="card">
-                    <div class="header">
-                        <span class="connections">500+</span>
-                        Your Connections
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
-                            <img src="icons/user-circle.png" alt="adrien" class="avatar-s">
-                            <span>Adrien D.</span>
-                        </span>
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
-                            <img src="icons/user-circle.png" alt="anne" class="avatar-s">
-                            <span>Anne J.</span>
-                        </span>
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
-                            <img src="icons/user-circle.png" alt="alayne" class="avatar-s">
-                            <span>Alayne T.</span>
-                        </span>
-                    </div>
-                    <div class="user-line">
-                        <span class="start">
-                            <img src="icons/user-circle.png" alt="arry" class="avatar-s">
-                            <span>Arry Y.</span>
-                        </span>
-                    </div>
-                    <div class="footer">
-                        <a href="#">View More</a>
-                    </div>
+                <ul class="card-list">
+                    <li class="card-list-item start">
+                        <img src="icons/user-circle.png" alt="adrien" class="avatar-s">
+                        Adrien D
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="icons/user-circle.png" alt="anne" class="avatar-s">
+                        Anne J
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="icons/user-circle.png" alt="alayne" class="avatar-s">
+                        Alayne T
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="icons/user-circle.png" alt="arry" class="avatar-s">
+                        Arry Y
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <a href="#">View More</a>
                 </div>
             </div>
+
         </div>
     </div>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
